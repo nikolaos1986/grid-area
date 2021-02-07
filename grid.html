@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-rows: 10% 80% 10%;
+            grid-template-columns: 20% 80%;
+            grid-template-areas: "header header"
+                "nav main"
+                "footer footer";
+
+            gap: 10px;
+            overflow: hidden;
+
+        
+
+        }
+        @media screen and (max-width: 768px) {
+            body {
+          
+            grid-template-rows: 10% 10%  70% 10%;
+            grid-template-columns: 100%;
+           
+            grid-template-areas: "header"
+                "nav" 
+                "main"
+                "footer";
+
+            gap: 10px;
+            overflow: hidden;
+
+            }
+
+        }
+            
+            
+        .header-container {
+            background-color: red;
+            grid-area: header;
+        }
+
+        .nav-container {
+            background-color: aqua;
+            grid-area: nav;
+        }
+
+        .main-container {
+            background-color: greenyellow;
+            grid-area: main;
+        }
+
+        .footer-container {
+            background-color: grey;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header-container">header</header>
+    <nav class="nav-container">nav</nav>
+    <main class="main-container">main content</main>
+    <footer class="footer-container">footer</footer>
+</body>
+
+</html>
